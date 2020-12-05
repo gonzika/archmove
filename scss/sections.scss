@@ -1,8 +1,23 @@
 @import 'var';
+@import 'mixins';
 
 .dream {
     &__content{
         margin-top: 50px;
+        @include media (599px) {
+            & {
+                margin-top: 15px;
+            }
+        }
+
+        &.flex  {
+            flex-wrap: nowrap;
+            @include media (730px) {
+                & {
+                    flex-wrap: wrap-reverse;
+                }
+            }
+        }
     }
 
     &__descr {
@@ -10,6 +25,11 @@
 
         & .button {
             margin-top: 50px;
+            @include media (599px) {
+                & {
+                    margin-top: 15px;
+                }
+            }
         }
     }
     &__foto {
@@ -28,31 +48,57 @@
 .profval {
     text-align: center;
     padding: 45px 0 45px 165px;
+    @include media (1300px) {
+        & {
+            max-width: 1200px;
+            padding: 45px 15px;
+            margin: 0 auto;   
+        }
+    }
+
     & h2 {
         margin: 0 auto;
     }
+
     &__slider {
         margin-top: 40px;
         position: relative;
+        @include media (1200px) {
+            & {
+                margin-top: 10px;
+            }
+        }
 
         & .modal {
             width: 100%;
             overflow: hidden;
+            flex: 0 0 100%;
+            padding: 20px;
             display: flex;
             flex-wrap: nowrap;
+            & {
+                padding: 5px;
+            }
         }
         
         & .tabs {
             width: 100%;
-            // flex: 0 0 100%;
-            // padding: 20px;
             transition: transform .3s ease-in, opacity .3s ease-in .15s;
             opacity: 0;
             display: flex;
-            flex-wrap: nowrap;
+            flex: 0 0 100%;
 
             & img {
                 margin-right: 40px;
+                @include media (1200px) {
+                    & {
+                        margin-right: 15px;
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                        max-width: calc(100% / 3 - 15px);
+                    }
+                }
             }
         }
         
@@ -76,15 +122,25 @@
 
         .profval__label--prev {
             position: absolute;
-            right: 220px;
+            right: 200px;
             top: -100px;
             z-index: 10;
+            @include media (1200px) {
+                & {
+                    position: static; 
+                }
+            }
         }
         .profval__label--next {
             position: absolute;
-            right: 165px;
+            right: 145px;
             top: -100px;
             z-index: 10;
+            @include media (1200px) {
+                & {
+                    position: static; 
+                }
+            }
         }
     }
 }
@@ -94,17 +150,45 @@
         max-width: 375px;
     }
 
+    &__foto {
+        @include media (799px) {
+            & {
+                display: none;  
+            }
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__content {
         margin-top: 40px;
+
+        &.flex  {
+            flex-wrap: nowrap;
+            @include media (799px) {
+                & {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
     }
 
     &__descr {
         max-width: 390px;
         width: 100%;
         text-align: center;
-
+        margin: 0 15px;
+        
         & .button {
             margin-top: 70px;
+            @include media (799px) {
+                & {
+                    margin-top: 15px;
+                }
+            }
         }
     }
 
@@ -116,6 +200,7 @@
     &__text {
         max-width: 280px;
         text-align: left;
+        margin-left: 15px;
     }
 }
 
@@ -128,11 +213,21 @@
         max-width: 765px;
         width: 100%;
         margin-left: auto;
+        @include media (950px) {
+            & {
+                padding-left: 30px;
+            }
+        }
 
         & q {
             position: relative;
             font-weight: 300;
             font-size: 3.2rem;
+            @include media (599px) {
+                & {
+                    font-size: 20px;
+                }
+            }
         }
         & q::before {
             font-size: 8rem;
@@ -147,6 +242,11 @@
 
     &__autor {
         margin-top: 60px;
+        @include media (599px) {
+            & {
+                margin-top: 15px;
+            }
+        }
     }
 
     &__slider {
@@ -156,12 +256,22 @@
             right: 50px;
             bottom: 0px;
             z-index: 10;
+            @include media (599px) {
+                & {
+                    bottom: -25px;
+                }
+            }
         }
         .toogood__label--next {
             position: absolute;
             right: 0;
             bottom: 0px;
             z-index: 10;
+            @include media (599px) {
+                & {
+                    bottom: -25px;
+                }
+            }
         }
 
         & .modal {
@@ -206,11 +316,48 @@
 }
 
 .realize {
+    &__foto {
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
     &__descr {
         max-width: 525px;
+        @include media (599px) {
+            & {
+               text-align: center;
+            }
+        }
 
         & .button {
             margin-top: 65px;
+            @include media (599px) {
+                & {
+                    margin-top: 15px;
+                }
+            }
         }
     }
+}
+
+.partners .container {
+    @include media (899px) {
+        & {
+            text-align: center;
+            max-width: 570px;
+        }
+    }
+    & .flex {
+        @include media (899px) {
+            & {
+                justify-content: space-around;
+            }
+            & img {
+                max-width: calc(100% / 2 - 10px);
+            }
+        }
+    }
+    
 }

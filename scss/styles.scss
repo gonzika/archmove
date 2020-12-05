@@ -17,6 +17,7 @@ body {
     font: 400 1.6rem/1.5 $ff;
     color: $dark;
     background-color: $light;
+    max-width: 1400px;
 }
 
 a, button, label {
@@ -62,6 +63,11 @@ label {
     max-width: 1200px;
     padding: 45px;
     margin: 0 auto;
+    @include media (599px) {
+        & {
+            padding: 30px 15px;
+        }
+    }
 }
 
 .flex {
@@ -86,9 +92,39 @@ h1, h2 {
 h1 {
     font-size: 112px;
     max-width: 800px;
+    @include media (799px) {
+        & {
+            font-size: 80px;
+        }
+    }
+    @include media (599px) {
+        & {
+            font-size: 60px;
+        }
+    }
+    @include media (499px) {
+        & {
+            font-size: 40px;
+        }
+    }
 }
 
 h2 {
     font-size: 48px;
     max-width: 535px;
+    @include media (799px) {
+        & {
+            font-size: 35px;
+        }
+    }
+    @include media (599px) {
+        & {
+            font-size: 30px;
+        }
+    }
+    @include media (499px) {
+        & {
+            font-size: 25px;
+        }
+    }
 }
