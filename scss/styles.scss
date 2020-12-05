@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'header-footer';
 @import 'sections';
+@import 'checkbox';
 
 * {
     box-sizing: border-box;
@@ -18,9 +19,26 @@ body {
     background-color: $light;
 }
 
-a, button {
+a, button, label {
     transition: all .3s ease-in-out;
     cursor: pointer;
+}
+a {
+    @include hover {
+        color: $brand;
+    }
+}
+button:not(.button__svg) {
+    @include hover {
+        box-shadow: 0 0 2px black;
+        color: $brand;
+        background-color: transparent;
+    }
+}
+label {
+    @include hover {
+        opacity: 80%;
+    }
 }
 
 .button {
@@ -32,6 +50,12 @@ a, button {
     border-radius: 4px;
     background-color: $brand;
     line-height: 40px;
+
+    &__svg {
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+    }
 }
 
 .container {

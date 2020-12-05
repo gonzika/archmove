@@ -27,11 +27,14 @@
 
 .profval {
     text-align: center;
-    padding: 45px 0 45px 45px;
+    padding: 45px 0 45px 165px;
     & h2 {
         margin: 0 auto;
     }
     &__slider {
+        margin-top: 40px;
+        position: relative;
+
         & .modal {
             width: 100%;
             overflow: hidden;
@@ -69,6 +72,19 @@
         
         & #radio3:checked ~ .modal> .tabs {
             transform: translate(-200%, 0);
+        }
+
+        .profval__label--prev {
+            position: absolute;
+            right: 220px;
+            top: -100px;
+            z-index: 10;
+        }
+        .profval__label--next {
+            position: absolute;
+            right: 165px;
+            top: -100px;
+            z-index: 10;
         }
     }
 }
@@ -134,6 +150,20 @@
     }
 
     &__slider {
+        position: relative;
+        .toogood__label--prev {
+            position: absolute;
+            right: 50px;
+            bottom: 0px;
+            z-index: 10;
+        }
+        .toogood__label--next {
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            z-index: 10;
+        }
+
         & .modal {
             width: 100%;
             overflow: hidden;
