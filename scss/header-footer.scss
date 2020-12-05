@@ -1,5 +1,16 @@
+@import 'var';
+@import 'mixins';
+
 .header {
     padding: 25px 50px;
+    @include media (599px) {
+        &  {
+            padding: 15px;
+        }
+        &.flex {
+            justify-content: start;
+        }
+    }
     
     &__side {
         display: flex;
@@ -8,15 +19,39 @@
     
     &__svg {
         margin-right: 35px;
+        @include media (599px) {
+            &  {
+                margin-right: 10px;
+            }
+        }
     }
 
     &__search {
         margin-right: 24px;
+        @include media (599px) {
+            &  {
+                margin-right: 0px;
+            }
+        }
     }
 
     &__regist {
         & .menu__item {
             margin-right: 16px;
+            @include media (599px) {
+                & {
+                    padding: 0;
+                    font-size: 1.5rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+        @include media (599px) {
+            & .button  {
+                padding: 10px 10px;
+                font-size: 1.5rem;
+                line-height: 1;
+            }
         }
     }
 }
@@ -33,4 +68,16 @@
 
 .footer {
     padding: 90px 0;
+    @include media (799px) {
+        & {
+            padding: 20px 0 0;
+        }
+        & .flex {
+            justify-content: center;
+            text-align: center;
+        }
+        & svg {
+            margin-top: 20px;
+        }
+    }
 }
