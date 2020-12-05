@@ -1,0 +1,186 @@
+@import 'var';
+
+.dream {
+    &__content{
+        margin-top: 50px;
+    }
+
+    &__descr {
+        max-width: 290px;
+
+        & .button {
+            margin-top: 50px;
+        }
+    }
+    &__foto {
+        max-width: 765px;
+        max-height: 480px;
+        width: 100%;
+        height: 100%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.profval {
+    text-align: center;
+    padding: 45px 0 45px 45px;
+    & h2 {
+        margin: 0 auto;
+    }
+    &__slider {
+        & .modal {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        
+        & .tabs {
+            width: 100%;
+            // flex: 0 0 100%;
+            // padding: 20px;
+            transition: transform .3s ease-in, opacity .3s ease-in .15s;
+            opacity: 0;
+            display: flex;
+            flex-wrap: nowrap;
+
+            & img {
+                margin-right: 40px;
+            }
+        }
+        
+        & #radio1:checked ~ .modal> #tab1,
+        & #radio2:checked ~ .modal> #tab2,
+        & #radio3:checked ~ .modal> #tab3 {
+            opacity: 1;
+        }
+        
+        & #radio1:checked ~ .modal> .tabs {
+            transform: translate(0, 0);
+        }
+        
+        & #radio2:checked ~ .modal> .tabs {
+            transform: translate(-100%, 0);
+        }
+        
+        & #radio3:checked ~ .modal> .tabs {
+            transform: translate(-200%, 0);
+        }
+    }
+}
+
+.archmove {
+    & h2 {
+        max-width: 375px;
+    }
+
+    &__content {
+        margin-top: 40px;
+    }
+
+    &__descr {
+        max-width: 390px;
+        width: 100%;
+        text-align: center;
+
+        & .button {
+            margin-top: 70px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        max-width: 280px;
+        text-align: left;
+    }
+}
+
+.toogood {
+    & h2 {
+        max-width: 375px;
+    }
+
+    &__quote {
+        max-width: 765px;
+        width: 100%;
+        margin-left: auto;
+
+        & q {
+            position: relative;
+            font-weight: 300;
+            font-size: 3.2rem;
+        }
+        & q::before {
+            font-size: 8rem;
+            color: $brand;
+            font-weight: 700;
+            content: '\201c';
+            position: absolute;
+            left: -50px;
+            line-height: 1;
+        }
+    }
+
+    &__autor {
+        margin-top: 60px;
+    }
+
+    &__slider {
+        & .modal {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        
+        & .tabs {
+            width: 100%;
+            flex: 0 0 100%;
+            padding: 20px;
+            transition: transform .3s ease-in, opacity .3s ease-in .15s;
+            opacity: 0;
+            // display: flex;
+            // flex-wrap: nowrap;
+
+            & img {
+                margin-right: 40px;
+            }
+        }
+        
+        & #toogood1:checked ~ .modal> #toogood-1,
+        & #toogood2:checked ~ .modal> #toogood-2,
+        & #radio3:checked ~ .modal> #tab3 {
+            opacity: 1;
+        }
+        
+        & #toogood1:checked ~ .modal> .tabs {
+            transform: translate(0, 0);
+        }
+        
+        & #toogood2:checked ~ .modal> .tabs {
+            transform: translate(-100%, 0);
+        }
+        
+        & #radio3:checked ~ .modal> .tabs {
+            transform: translate(-200%, 0);
+        }
+    }
+}
+
+.realize {
+    &__descr {
+        max-width: 525px;
+
+        & .button {
+            margin-top: 65px;
+        }
+    }
+}

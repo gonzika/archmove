@@ -1,6 +1,8 @@
 @import 'normalize';
 @import 'var';
 @import 'mixins';
+@import 'header-footer';
+@import 'sections';
 
 * {
     box-sizing: border-box;
@@ -11,14 +13,25 @@ html {
 }
 
 body {
-    font: 400 2rem/1.5 $ff;
-    color: $light;
-    background-color: $bgc;
+    font: 400 1.6rem/1.5 $ff;
+    color: $dark;
+    background-color: $light;
 }
 
 a, button {
     transition: all .3s ease-in-out;
     cursor: pointer;
+}
+
+.button {
+    font-size: 1.4rem;
+    padding: 4px 24px;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    background-color: $brand;
+    line-height: 40px;
 }
 
 .container {
@@ -31,4 +44,27 @@ a, button {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+    & span {
+        color: $brand;
+    }
+}
+
+h1 {
+    font-size: 112px;
+    max-width: 800px;
+}
+
+h2 {
+    font-size: 48px;
+    max-width: 535px;
 }

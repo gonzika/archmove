@@ -1,0 +1,36 @@
+.header {
+    padding: 25px 50px;
+    
+    &__side {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__svg {
+        margin-right: 35px;
+    }
+
+    &__search {
+        margin-right: 24px;
+    }
+
+    &__regist {
+        & .menu__item {
+            margin-right: 16px;
+        }
+    }
+}
+
+.menu {
+    &__item {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 300;
+        font-size: 1.4rem;
+        padding: 4px 24px;
+    }
+}
+
+.footer {
+    padding: 90px 0;
+}
