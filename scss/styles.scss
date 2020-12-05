@@ -1,0 +1,34 @@
+@import 'normalize';
+@import 'var';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 400 2rem/1.5 $ff;
+    color: $light;
+    background-color: $bgc;
+}
+
+a, button {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 45px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
