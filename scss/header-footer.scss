@@ -28,6 +28,11 @@
 
     &__search {
         margin-right: 24px;
+        @include media (1099px) {
+            & {
+                margin-right: 10px;
+            }
+        }
         @include media (599px) {
             &  {
                 margin-right: 0px;
@@ -46,11 +51,17 @@
                 }
             }
         }
+        @include media (799px) {
+            & .button  {
+                margin-right: 15px;
+            }
+        }
         @include media (599px) {
             & .button  {
                 padding: 10px 10px;
                 font-size: 1.5rem;
                 line-height: 1;
+                margin-right: 0px;
             }
         }
     }
@@ -63,12 +74,22 @@
         font-weight: 300;
         font-size: 1.4rem;
         padding: 4px 24px;
+        @include media (1099px) {
+            & {
+                padding: 4px 10px;
+            }
+        }
+        @include media (899px) {
+            & {
+                padding: 4px 4px;
+            }
+        }
     }
 }
 
 .footer {
-    padding: 90px 0;
-    @include media (799px) {
+    padding: 40px 0;
+    @include media (499px) {
         & {
             padding: 20px 0 0;
         }
